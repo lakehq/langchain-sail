@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "langchain-sail"
+version = "0.1.0"
+description = "LangChain integration for Sail (drop-in Apache Spark replacement)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "langchain-core>=1.2.0,<2.0.0",
+    "langchain-community>=0.4.0,<1.0.0",
+    "langchain-classic>=1.0.0,<2.0.0",
+    "pyspark>=3.5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/lakehq/langchain-sail"
+Repository = "https://github.com/lakehq/langchain-sail"
+Documentation = "https://docs.lakesail.com/"
+
+[dependency-groups]
+test = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pysail>=0.5.0",
+    "pandas>=2.2.0",
+    "pyarrow>=15.0.0",
+    "grpcio>=1.48.1",
+    "grpcio-status>=1.48.1",
+]
+lint = [
+    "ruff>=0.13.1",
+]
+typing = [
+    "mypy>=1.10.0",
+]
+dev = [
+    "langchain-core",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
