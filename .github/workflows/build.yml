@@ -39,10 +39,10 @@ jobs:
       - name: Run integration tests
         run: make integration_test
 
-      - name: Build distribution artifacts
+      - name: Build artifacts
         run: uv build
 
-      - name: Upload distribution artifacts
+      - name: Upload artifacts
         uses: actions/upload-artifact@v7
         with:
           name: dist
