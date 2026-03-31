@@ -6,9 +6,12 @@ build-backend = "hatchling.build"
 name = "langchain-sail"
 version = "0.1.1"
 description = "LangChain integration for Sail — a Rust-based drop-in replacement for Spark"
+authors = [
+    { name = "LakeSail", email = "hello@lakesail.com" },
+]
 readme = "README.md"
+license = { file = "LICENSE" }
 requires-python = ">=3.10"
-license = "MIT"
 dependencies = [
     "langchain-core>=1.2.0,<2.0.0",
     "langchain-community>=0.4.0,<1.0.0",
