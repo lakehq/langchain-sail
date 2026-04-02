@@ -77,8 +77,8 @@ class SailSQL(SparkSQL):
         except ImportError:
             msg = (
                 "pyspark is not installed. "
-                "Please install it with `pip install pyspark-client` (thin client) "
-                "or `pip install pyspark` (full Spark distribution)."
+                "Please install it with `pip install pyspark-client` "
+                "or `pip install pyspark`."
             )
             raise ImportError(msg)
 
